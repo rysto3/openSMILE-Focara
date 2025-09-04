@@ -84,6 +84,7 @@ def extract_features(
     # --- 1) Tempo & rhythm (librosa) ---
     y, sr = librosa.load(wav_path, sr=22050, mono=True)
     tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr, trim=False)
+    tempo = float(tempo)
     beat_times = librosa.frames_to_time(beat_frames, sr=sr)
     ibi = np.diff(beat_times)  # inter-beat intervals (s)
     beat_irregularity = float(np.std(ibi)) if len(ibi) > 2 else np.nan
@@ -130,10 +131,10 @@ def extract_features(
         cols = f.filter(regex=regex).columns
         return float(f.iloc[0][cols[0]]) if len(cols) else np.nan
 
-    voicing_mean = pick(r'^voicingProbability_.*(_amean|_mean)$')
-    voicing_p95 = pick(r'^voicingProbability_.*percentile95\.0$')
-    f0_std = pick(r'^F0final_.*_stddev$')
-    flux_median = pick(r'^spectralFlux_.*_(median|pctlrange25-75|quartile2)$')  # robust-ish fallback
+    voicing_mean = pick(r'^VoicedSegmentsPerSec$') / 10.0  # scale roughly to 0-1
+    voicing_p95 = pick(r'^MeanVoicedSegmentLengthSec$')
+    f0_std = pick(r'^F0semitoneFrom27\.5Hz_.*_stddevNorm$')
+    flux_median = pick(r'^spectralFlux_sma3_amean$') / 100.0  # scale to ~0-0.05
 
     features = {
         "tempo_bpm": tempo,
@@ -334,7 +335,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     new_feature_rows: List[dict] = []
 
     smile = opensmile.Smile(
-        feature_set=opensmile.FeatureSet.ComParE_2016,
+        feature_set=opensmile.FeatureSet.eGeMAPSv02,
         feature_level=opensmile.FeatureLevel.Functionals,
     )
     smile_lock = threading.Lock()
