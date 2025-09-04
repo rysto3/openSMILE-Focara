@@ -1,0 +1,33 @@
+[
+  {
+    "track": "smile.wav",
+    "beat_irregularity": 0.018594752129233953,
+    "centroid_mean_hz": 1785.498784041634,
+    "centroid_std_hz": 956.9239843543231,
+    "dynamic_range": 0.3294074535369873,
+    "f0_std": 32.12816619873047,
+    "high_freq_ratio_>4k": 0.2034522294998169,
+    "mfcc1_mean": 103.20349884033203,
+    "mfcc1_std": 46.00770950317383,
+    "mfcc2_mean": 23.302322387695312,
+    "mfcc2_std": 24.602764129638672,
+    "mfcc3_mean": 41.281288146972656,
+    "mfcc3_std": 15.58011531829834,
+    "mfcc4_mean": 14.678817749023438,
+    "mfcc4_std": 11.252110481262207,
+    "mfcc5_mean": 18.57697296142578,
+    "mfcc5_std": 8.823387145996094,
+    "onset_rate_per_s": 4.768475482221706,
+    "rms_mean": 0.2938162684440613,
+    "rms_std": 0.104650117456913,
+    "rolloff85_mean_hz": 4203.9497979094585,
+    "spectral_flatness_median": 0.003321300959214568,
+    "spectral_flux_median": null,
+    "sr": 22050,
+    "tempo_bpm": [
+      107.666015625
+    ],
+    "voicing_mean": null,
+    "voicing_p95": null
+  }
+]
