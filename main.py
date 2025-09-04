@@ -122,10 +122,10 @@ def extract_features(
 
     # --- 2) Voicing & pitch steadiness (openSMILE functionals) ---
     if lock is None:
-        f = smile.process_file(wav_path)  # 1 row
+        f = smile.process_signal(y, sr)  # 1 row
     else:
         with lock:
-            f = smile.process_file(wav_path)
+            f = smile.process_signal(y, sr)
 
     def pick(regex: str) -> float:
         cols = f.filter(regex=regex).columns
