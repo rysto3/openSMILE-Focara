@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c277c77e-ecbb-41f1-b355-ce926b3924ef" name="Changes" comment="Creates CSVs &amp; Prints Results">
-      <change afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="c277c77e-ecbb-41f1-b355-ce926b3924ef" name="Changes" comment="JetBrains files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1756995371788</updated>
-      <workItem from="1756995372811" duration="4024000" />
+      <workItem from="1756995372811" duration="4413000" />
     </task>
     <task id="LOCAL-00001" summary="Creates CSVs &amp; Prints Results">
       <option name="closed" value="true" />
@@ -118,7 +114,39 @@
       <option name="project" value="LOCAL" />
       <updated>1756998792366</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add AGENTS.md">
+      <option name="closed" value="true" />
+      <created>1756999728080</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756999728080</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Create JSON File Sidecar">
+      <option name="closed" value="true" />
+      <created>1756999748593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756999748593</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add example files&#10;Created from smile.wav">
+      <option name="closed" value="true" />
+      <created>1756999785195</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756999785195</updated>
+    </task>
+    <task id="LOCAL-00005" summary="JetBrains files">
+      <option name="closed" value="true" />
+      <created>1756999813185</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756999813185</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,9 +165,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creates CSVs &amp; Prints Results" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creates CSVs &amp; Prints Results" />
+    <MESSAGE value="Add AGENTS.md" />
+    <MESSAGE value="Create JSON File Sidecar" />
+    <MESSAGE value="Add example files&#10;Created from smile.wav" />
+    <MESSAGE value="JetBrains files" />
+    <option name="LAST_COMMIT_MESSAGE" value="JetBrains files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/openSMILE_Focara$main.coverage" NAME="main Coverage Results" MODIFIED="1756999322545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/openSMILE_Focara$main.coverage" NAME="main Coverage Results" MODIFIED="1756999608547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
