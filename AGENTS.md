@@ -37,3 +37,20 @@ Scores should contain the same data as the Focus, Calming, etc.
 Features should include the more precise features of the audio file.
 
 You can see `example_features.csv`,`example_scores.csv`,`example_features.json`,`example_scores.json` for example results of my own run against smile.wav
+
+## Example Usage
+
+default: processes ./smile.wav if present
+
+```python main.py```
+
+process one file
+
+```python main.py path\to\song.wav```
+
+process a folder recursively
+
+```python main.py path\to\folder```
+
+process a folder non-recursively
+```python main.py path\to\folder --no-recursive```

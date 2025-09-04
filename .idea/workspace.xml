@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c277c77e-ecbb-41f1-b355-ce926b3924ef" name="Changes" comment="JetBrains files" />
+    <list default="true" id="c277c77e-ecbb-41f1-b355-ce926b3924ef" name="Changes" comment="Add requirements.txt">
+      <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1756995371788</updated>
-      <workItem from="1756995372811" duration="4413000" />
+      <workItem from="1756995372811" duration="4714000" />
     </task>
     <task id="LOCAL-00001" summary="Creates CSVs &amp; Prints Results">
       <option name="closed" value="true" />
@@ -146,7 +148,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756999813185</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add requirements.txt">
+      <option name="closed" value="true" />
+      <created>1756999968367</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756999968367</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add requirements.txt">
+      <option name="closed" value="true" />
+      <created>1756999977604</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756999977604</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,9 +187,10 @@
     <MESSAGE value="Create JSON File Sidecar" />
     <MESSAGE value="Add example files&#10;Created from smile.wav" />
     <MESSAGE value="JetBrains files" />
-    <option name="LAST_COMMIT_MESSAGE" value="JetBrains files" />
+    <MESSAGE value="Add requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add requirements.txt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/openSMILE_Focara$main.coverage" NAME="main Coverage Results" MODIFIED="1756999608547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/openSMILE_Focara$main.coverage" NAME="main Coverage Results" MODIFIED="1757000023687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
