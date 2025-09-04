@@ -5,6 +5,7 @@ import json
 import sys
 import time
 from pathlib import Path
+import threading
 
 import numpy as np
 import pandas as pd
@@ -75,7 +76,11 @@ def df_json_safe(df: pd.DataFrame) -> pd.DataFrame:
 # Feature extraction
 # -------------------------------
 
-def extract_features(wav_path: str) -> pd.Series:
+def extract_features(
+    wav_path: str,
+    smile: opensmile.Smile,
+    lock: threading.Lock | None = None,
+) -> pd.Series:
     # --- 1) Tempo & rhythm (librosa) ---
     y, sr = librosa.load(wav_path, sr=22050, mono=True)
     tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr, trim=False)
@@ -115,11 +120,11 @@ def extract_features(wav_path: str) -> pd.Series:
     mfcc_stds = [float(np.std(mfcc[i])) for i in range(1, 6)]
 
     # --- 2) Voicing & pitch steadiness (openSMILE functionals) ---
-    smile = opensmile.Smile(
-        feature_set=opensmile.FeatureSet.ComParE_2016,  # or eGeMAPSv02 for a small set
-        feature_level=opensmile.FeatureLevel.Functionals,
-    )
-    f = smile.process_file(wav_path)  # 1 row
+    if lock is None:
+        f = smile.process_file(wav_path)  # 1 row
+    else:
+        with lock:
+            f = smile.process_file(wav_path)
 
     def pick(regex: str) -> float:
         cols = f.filter(regex=regex).columns
@@ -328,9 +333,15 @@ def main(argv: Iterable[str] | None = None) -> int:
     new_score_rows: List[dict] = []
     new_feature_rows: List[dict] = []
 
+    smile = opensmile.Smile(
+        feature_set=opensmile.FeatureSet.ComParE_2016,
+        feature_level=opensmile.FeatureLevel.Functionals,
+    )
+    smile_lock = threading.Lock()
+
     for i, wav in enumerate(wavs, 1):
         try:
-            feat = extract_features(str(wav))
+            feat = extract_features(str(wav), smile, smile_lock)
 
             # Feature row (wide), first column is track
             feature_row = {"track": wav.name}
